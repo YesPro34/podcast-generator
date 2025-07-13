@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     git 
 
 RUN pip install --break-system-packages PyYAML
-RUN chmod +x /entrypoint.sh
+RUN chmod -R 755 /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 
